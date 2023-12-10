@@ -62,10 +62,10 @@ export async function getAllPosts(): Promise<NotionPost[]> {
 }
 
 export async function getPageContent(pageId: string) {
-  const response = await notion.blocks.children.list({
-    block_id: pageId,
-    page_size: 50,
-  });
+  // const response = await notion.blocks.children.list({
+  //   block_id: pageId,
+  //   page_size: 50
+  // });
   const mdblocks = await n2m.pageToMarkdown(pageId, 2);
   const mdString = n2m.toMarkdownString(mdblocks);
 

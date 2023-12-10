@@ -9,11 +9,11 @@ export default async function Page({ params }: { params: { id: string } }) {
   
   return (
     <>
-      <div className="container mx-auto p-20 md:w-4/5 lg:w-3/5">
-        <div className="">
+      <div className="container mx-auto px-10 py-20 md:w-4/5 lg:w-3/5">
+        <div className="pb-10">
           <BackButton />
         </div>
-        <div className="text-center px-5 lg:px-20">
+        <div className="text-center text-sm md:text-lg font-semibold px-2 lg:px-20">
           <p>{pageInfo.title}</p>
         </div>
         <div className="text-right px-5 lg:px-20 text-gray-500">
@@ -22,7 +22,7 @@ export default async function Page({ params }: { params: { id: string } }) {
         <div className="text-right px-5 lg:px-20 text-gray-500">
           <p>{pageInfo.author}</p>
         </div>
-        <div className="py-10 px-5  lg:p-10 lg:px-20">
+        <div className="py-10 px-2  lg:p-10 lg:px-20">
           {pageContents.map((content:any, index:any) => {
             const formattedMarkdown = content.parent.replace(/\n/g, '  \n');
             return (
